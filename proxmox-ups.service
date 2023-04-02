@@ -1,0 +1,9 @@
+[Unit]
+Description=Foo
+
+[Service]
+User=root
+ExecStart=/bin/bash -c "proxmox-ups"
+
+[Install]
+WantedBy=multi-user.target
