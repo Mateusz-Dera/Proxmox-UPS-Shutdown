@@ -1,12 +1,12 @@
 # Proxmox UPS Shutdown
 ## Info:
 - A simple systemd service that shuts down all virtual machines and containers if the UPS battery level drops below a specified percentage value.
-- [![Version](https://img.shields.io/badge/0.5.1_Alpha-Current_Version-green.svg)](https://github.com/Mateusz-Dera/https://github.com/Mateusz-Dera/Proxmox-UPS-Shutdown)
+- [![Version](https://img.shields.io/badge/0.5.2_Alpha-Current_Version-green.svg)](https://github.com/Mateusz-Dera/https://github.com/Mateusz-Dera/Proxmox-UPS-Shutdown)
 ## Installation:
 ```
-wget -P /etc/systemd/system/ https://raw.githubusercontent.com/Mateusz-Dera/Proxmox-UPS-Shutdown/main/proxmox-ups.service
-wget -P /bin/ https://raw.githubusercontent.com/Mateusz-Dera/Proxmox-UPS-Shutdown/main/proxmox-ups
-wget -P /bin/ https://raw.githubusercontent.com/Mateusz-Dera/Proxmox-UPS-Shutdown/main/proxmox-shutdown
+curl -o /etc/systemd/system/proxmox-ups.service -L -O https://raw.githubusercontent.com/Mateusz-Dera/Proxmox-UPS-Shutdown/main/proxmox-ups.service
+curl -o /bin/proxmox-ups -L -O https://raw.githubusercontent.com/Mateusz-Dera/Proxmox-UPS-Shutdown/main/proxmox-ups
+curl -o /bin/proxmox-shutdown -L -O https://raw.githubusercontent.com/Mateusz-Dera/Proxmox-UPS-Shutdown/main/proxmox-shutdown
 ```
 
 Edit configuration in /bin/proxmox-ups file
