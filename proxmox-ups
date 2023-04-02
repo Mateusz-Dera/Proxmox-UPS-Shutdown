@@ -33,7 +33,7 @@ do
       echo "Checking..."
       sleep $refresh
       battery_level_2=$(upsc $your_ups battery.charge)
-      if [ "$battery_percentage_2" -le $battery_percentage ]
+      if [ "$battery_level_2" -le $battery_percentage ]
         then
           proxmox-shutdown
           break
