@@ -7,6 +7,11 @@
 wget -P /etc/systemd/system/ https://raw.githubusercontent.com/Mateusz-Dera/Proxmox-UPS-Shutdown/main/proxmox-ups.service
 wget -P /bin/ https://raw.githubusercontent.com/Mateusz-Dera/Proxmox-UPS-Shutdown/main/proxmox-ups
 wget -P /bin/ https://raw.githubusercontent.com/Mateusz-Dera/Proxmox-UPS-Shutdown/main/proxmox-shutdown
+```
+
+Edit configuration in /bin/proxmox-ups file
+
+```
 chmod +x /bin/proxmox-ups
 chmod +x /bin/proxmox-shutdown
 systemctl daemon-reload
