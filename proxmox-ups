@@ -22,18 +22,18 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
 
 your_ups=ups@localhost
-battery_percentage=85
+battery_percentage=70
 refresh=10
 
 while true
 do
   battery_level=$(upsc $your_ups battery.charge)
-  if [ "$battery_level" -lt $battery_percentage ]
+  if [ "$battery_level" -le $battery_percentage ]
     then
       echo "Checking..."
       sleep $refresh
       battery_level_2=$(upsc $your_ups battery.charge)
-      if [ "$battery_percentage_2" -lt $battery_percentage ]
+      if [ "$battery_percentage_2" -le $battery_percentage ]
         proxmox-shutdown
         break
       fi
