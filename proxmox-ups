@@ -30,8 +30,13 @@ do
   battery_level=$(upsc $your_ups battery.charge)
   if [ "$battery_level" -lt $battery_percentage ]
     then
-      proxmox-shutdown
-      break
+      echo "Checking..."
+      sleep $refresh
+      battery_level_2=$(upsc $your_ups battery.charge)
+      if [ "$battery_percentage_2" -lt $battery_percentage ]
+        proxmox-shutdown
+        break
+      fi
     else
       echo $battery_level
       echo "Reloading..."
