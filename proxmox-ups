@@ -23,6 +23,7 @@
 
 your_ups=ups@localhost
 battery_percentage=85
+refresh=10
 
 while true
 do
@@ -34,7 +35,7 @@ do
     else
       echo $battery_level
       echo "Reloading..."
-      sleep 60
+      sleep $refresh
     fi
 done
 
